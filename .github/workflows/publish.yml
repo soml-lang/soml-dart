@@ -1,0 +1,10 @@
+name: Publish
+on:
+  push:
+    tags:
+      - 'v*'
+jobs:
+  publish:
+    permissions:
+      id-token: write
+    uses: dart-lang/setup-dart/.github/workflows/publish.yml@v1

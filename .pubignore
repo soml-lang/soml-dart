@@ -1,0 +1,15 @@
+# Publish only what is listed here: ignore everything, then include the package files.
+/*
+!/lib/
+!/example/
+!/test/
+!/pubspec.yaml
+!/readme.md
+!/CHANGELOG.md
+!/LICENSE
+!/analysis_options.yaml
+
+# The tests that need the conformance suite, which is not published.
+/test/conformance/
+/test/conformance_test.dart
+/test/property_test.dart

@@ -1,0 +1,17 @@
+name: Test
+on:
+  - push
+  - pull_request
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v7
+      - uses: dart-lang/setup-dart@v1
+      - uses: actions/setup-node@v7
+        with:
+          node-version: 26
+      - run: git clone --depth 1 https://github.com/soml-lang/soml-javascript ../soml-javascript
+      - run: dart pub get
+      - run: dart analyze
+      - run: dart test test tool benchmark/test

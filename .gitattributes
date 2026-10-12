@@ -1,0 +1,4 @@
+* text=auto eol=lf
+
+# The conformance cases test exact bytes, including CR and invalid UTF-8, so Git must not convert them.
+test/conformance/** -text whitespace=cr-at-eol

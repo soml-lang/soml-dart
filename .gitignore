@@ -1,0 +1,5 @@
+.dart_tool/
+pubspec.lock
+benchmark/build/
+tool/differential/work/
+doc/api/
